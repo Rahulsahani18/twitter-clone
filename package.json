@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "backend/server.js",
 	"scripts": {
-		 "dev": "SET NODE_ENV=development && nodemon backend/server.js",
+		  "dev": "export NODE_ENV=development && nodemon backend/server.js",
 		"start": "SET NODE_ENV=production && node backend/server.js",
 		"build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
 	},
