@@ -13,7 +13,7 @@ import { formatPostDate } from "../../utils/date";
 
 const Post = ({ post }) => {
 	const [comment, setComment] = useState("");
-	const { data: authUser } = useQuery({ queryKey: ["authUser"] });
+	const { data: authUser, isLoading } = useQuery({ queryKey: ["authUser"] }); 
 	const queryClient = useQueryClient();
 	const postOwner = post.user;
 	if (isLoading || !authUser || !post || !post.user) {
